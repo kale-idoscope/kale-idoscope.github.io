@@ -1,1 +1,130 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Elements with Carousel</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="section-1" class="diary-entry">
+        <div class="container-fluid pt-1 pb-1">
+            <a class="d-block post-link" data-title="Section 1" href="#">
+                <div class="row align-items-center">
+                    <div class="col-2 date">
+                        Section 1
+                    </div>
+                    <h2 class="col-9 text-uppercase mb-0">
+                        Kale
+                    </h2>
+                    <div class="col-1 text-right">
+                        <div class="post-action d-inline-block">
+                            <div class="post-action-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="collapsible-content">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/image1.jpg" class="d-block w-100" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Third slide">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                
+                </div>
+                <p>Start by rinsing and drying a bunch of kale and arugula, then tear the leaves into bite-sized pieces and place them in a large bowl. Drain and rinse a 15oz can of chickpeas, then add them to the greens. Make a simple vinaigrette by whisking together 3 tablespoons olive oil, 2 tablespoons red wine vinegar, 1 teaspoon Dijon mustard, 1 minced garlic clove, salt, and pepper. Pour the dressing over the salad and toss to coat everything evenly. Top with crumbled feta or shaved Parmesan cheese for extra flavor and protein. You can also add diced tomatoes, sliced red onion, or toasted nuts for crunch.</p>
+            </div>
+                </div>
+
+        </div>
+    </div>
+    
+    <div id="section-2" class="diary-entry">
+        <div class="container-fluid pt-1 pb-1">
+            <a class="d-block post-link" data-title="Section 2" href="#">
+                <div class="row align-items-center">
+                    <div class="col-2 date">
+                        Section 2
+                    </div>
+                    <h2 class="col-9 text-uppercase mb-0">
+                        More Kale
+                    </h2>
+                    <div class="col-1 text-right">
+                        <div class="post-action d-inline-block">
+                            <div class="post-action-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="collapsible-content">
+                <div class="carousel-container">
+                    <button class="carousel-button prev">‹</button>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/150" alt="Image 3">
+                            <p>Text for Image 3</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/150" alt="Image 4">
+                            <p>Text for Image 4</p>
+                        </div>
+                    </div>
+                    <button class="carousel-button next">›</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var postLinks = document.getElementsByClassName('post-link');
+            for (var i = 0; i < postLinks.length; i++) {
+                postLinks[i].addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var content = this.parentElement.querySelector('.collapsible-content');
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            }
+
+            var carousels = document.getElementsByClassName('carousel-container');
+            for (var j = 0; j < carousels.length; j++) {
+                let carousel = carousels[j].querySelector('.carousel');
+                let prevButton = carousels[j].querySelector('.prev');
+                let nextButton = carousels[j].querySelector('.next');
+
+                prevButton.addEventListener('click', function () {
+                    carousel.scrollBy({ left: -carousel.clientWidth, behavior: 'smooth' });
+                });
+
+                nextButton.addEventListener('click', function () {
+                    carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
