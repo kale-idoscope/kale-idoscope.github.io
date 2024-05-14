@@ -22,14 +22,14 @@ body {
 
 .col-2.date {
     font-family: "Plus Jakarta Sans", sans-serif; /* Change to your preferred font */
-    font-size: 14px; /* Change to your preferred size */
+    font-size: 10px; /* Change to your preferred size */
     color: black; /* Change to your preferred color */
     font-weight: bold; /* Optional: Change to your preferred weight */
 }
 
 .col-9.text-uppercase.mb-0 {
     font-family: "Plus Jakarta Sans", sans-serif; /* Change to your preferred font */
-    font-size: 24px; /* Change to your preferred size */
+    font-size: 26px; /* Change to your preferred size */
     color: #555; /* Change to your preferred color */
     font-weight: bold; /* Optional: Change to your preferred weight */
     text-transform: uppercase; /* Ensure text is uppercase */
