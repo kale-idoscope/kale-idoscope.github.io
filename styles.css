@@ -1,11 +1,45 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family:  "Titillium Web", sans-serif;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 800
+
+.plus-jakarta-sans-<uniquifier> {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.titillium-web-extralight {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+
+.col-2.date {
+    font-family: "Plus Jakarta Sans", sans-serif; /* Change to your preferred font */
+    font-size: 14px; /* Change to your preferred size */
+    color: black; /* Change to your preferred color */
+    font-weight: bold; /* Optional: Change to your preferred weight */
+}
+
+.col-9.text-uppercase.mb-0 {
+    font-family: "Plus Jakarta Sans", sans-serif; /* Change to your preferred font */
+    font-size: 24px; /* Change to your preferred size */
+    color: #555; /* Change to your preferred color */
+    font-weight: bold; /* Optional: Change to your preferred weight */
+    text-transform: uppercase; /* Ensure text is uppercase */
+    margin-bottom: 0; /* Ensure no bottom margin */
 }
 
 .diary-entry {
     margin: 20px 0;
     border-top: 2px solid black; /* Add a black border on top */
-    padding-top: 10px; /* Optional: Add some padding to separate the content from the border */
+    padding-top: 2px; /* Optional: Add some padding to separate the content from the border */
 }
 
 .collapsible-content {
