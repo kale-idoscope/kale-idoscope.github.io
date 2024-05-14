@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.diary-entry {
+    margin: 20px 0;
+    border-top: 2px solid black; /* Add a black border on top */
+    padding-top: 10px; /* Optional: Add some padding to separate the content from the border */
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding: 10px 0;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 150px;
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 14px;
+}
+
+.carousel-button {
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.carousel-button:hover {
+    background-color: #ccc;
+}
+
+.prev {
+    margin-right: 10px;
+}
+
+.next {
+    margin-left: 10px;
+}
+
+.date {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.text-uppercase {
+    font-size: 18px;
+}
+
+.post-action-icon {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+}
+
+/* Add these styles to override the default link styles */
+.post-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+}
+
+.post-link:hover {
+    color: inherit; /* Ensure the color stays the same on hover */
+}
