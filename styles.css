@@ -61,6 +61,21 @@ body {
     width: 100%;
 }
 
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Set this to the desired height of the carousel */
+    background-color: #f8f9fa; /* Optional: Add a background color to see the frame */
+}
+
+.carousel-item img {
+    width: 150px; /* Set the width of the images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: none; /* Do not scale the image */
+}
+/*
 .carousel-item {
     min-width: 100%;
     box-sizing: border-box;
@@ -70,11 +85,11 @@ body {
 
 .carousel-item img {
     width: 150px;
-    height: 500px;
+    height: 300px;
     object-fit: cover;
     margin-bottom: 10px;
 }
-
+*/
 .carousel-item p {
     font-size: 14px;
 }
