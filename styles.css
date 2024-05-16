@@ -18,18 +18,16 @@ body {
   font-style: normal;
 }
 
-
-
 .col-2.date {
-    font-family: "Plus Jakarta Sans", sans-serif; /* Change to your preferred font */
-    font-size: 10px; /* Change to your preferred size */
+    font-family: "Titillium Web", sans-serif; /* Change to your preferred font */
+    font-size: 12px; /* Change to your preferred size */
     color: black; /* Change to your preferred color */
     font-weight: bold; /* Optional: Change to your preferred weight */
 }
 
 .col-9.text-uppercase.mb-0 {
     font-family: "Plus Jakarta Sans", sans-serif; /* Change to your preferred font */
-    font-size: 18px; /* Change to your preferred size */
+    font-size: 24px; /* Change to your preferred size */
     color: #555; /* Change to your preferred color */
     font-weight: bold; /* Optional: Change to your preferred weight */
     text-transform: uppercase; /* Ensure text is uppercase */
@@ -38,15 +36,15 @@ body {
 
 .diary-entry {
     margin: 20px 0;
-    border-top: 2px solid black; /* Add a black border on top */
-    padding-top: 2px; /* Optional: Add some padding to separate the content from the border */
+    border-top: 1px solid black; /* Add a black border on top */
+    padding-top: 0px; /* Optional: Add some padding to separate the content from the border */
 }
 
 .collapsible-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    padding: 10px 0;
+    padding: 0px 0;
 }
 
 .carousel-container {
@@ -58,35 +56,37 @@ body {
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    width: 100%;
+    width: 30%;
 }
 
-
 .carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px; /* Set this to the desired height of the carousel */
-    background-color: #f8f9fa; /* Optional: Add a background color to see the frame */
+    width: calc(300px + 40px); /* Calculate the width to include image width and padding */
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    object-fit: none
 }
 
 .carousel-item img {
-    width: 300px; /* Set the width of the images */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: none; /* Do not scale the image */
+    max-width: 80%; /* Ensure images don't exceed the width of the carousel item */
+    max-height: 80%; /* Ensure images don't exceed the width of the carousel item */
+
+    display: block; /* Prevent inline image spacing */
 }
+
 /*
 .carousel-item {
-    min-width: 100%;
+    width: 400px;
     box-sizing: border-box;
     padding: 10px;
     text-align: center;
+    object-fit: none
 }
 
 .carousel-item img {
-    width: 150px;
+    width: 300px;
     height: 300px;
-    object-fit: cover;
+    object-fit: none;
     margin-bottom: 10px;
 }
 */
@@ -94,16 +94,16 @@ body {
     font-size: 14px;
 }
 
-.carousel-button {
-    background-color: #f1f1f1;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: white !important; /* Set the background color to orange */
+    border-color: orange !important; /* Set the border color to orange */
+    color: white !important; /* Set the text color to white */
 }
 
-.carousel-button:hover {
-    background-color: #ccc;
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: orange !important; /* Darken the background color on hover */
 }
 
 .prev {
