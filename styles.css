@@ -68,8 +68,8 @@ body {
 }
 
 .carousel-item img {
-    max-width: 80%; /* Ensure images don't exceed the width of the carousel item */
-    max-height: 80%; /* Ensure images don't exceed the width of the carousel item */
+    max-width: 99%; /* Ensure images don't exceed the width of the carousel item */
+    max-height: 99%; /* Ensure images don't exceed the width of the carousel item */
 
     display: block; /* Prevent inline image spacing */
 }
@@ -97,7 +97,7 @@ body {
 .carousel-control-prev,
 .carousel-control-next {
     background-color: white !important; /* Set the background color to orange */
-    border-color: orange !important; /* Set the border color to orange */
+    border-color: white !important; /* Set the border color to orange */
     color: white !important; /* Set the text color to white */
 }
 
