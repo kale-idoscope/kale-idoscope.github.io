@@ -56,7 +56,7 @@ body {
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    width: 30%;
+    width: 100%;
 }
 
 .carousel-item {
@@ -103,7 +103,7 @@ body {
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-    background-color: orange !important; /* Darken the background color on hover */
+    background-color: white !important; /* Darken the background color on hover */
 }
 
 .prev {
